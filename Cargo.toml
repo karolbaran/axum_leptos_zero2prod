@@ -15,6 +15,22 @@ axum = "0.8.3"
 leptos = "0.7.8"
 serde = { version = "1.0.219", features = ["derive"] }
 tokio = { version = "1.44.2", features = ["macros", "rt-multi-thread"] }
+sqlx-cli = { version = "0.8.3", features = [
+  "native-tls",
+  "postgres",
+  "rustls",
+] }
+
+[dependencies.sqlx]
+version = "0.8.3"
+features = [
+  "runtime-tokio-rustls",
+  "postgres",
+  "macros",
+  "uuid",
+  "chrono",
+  "migrate",
+]
 
 [dev-dependencies]
 reqwest = "0.12.15"
